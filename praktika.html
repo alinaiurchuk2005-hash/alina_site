@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Практична робота з JavaScript – Юрчук Аліна</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #fdf2ff, #e7f9ff, #fef7e0);
+            color: #333;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid #f0dff5;
+        }
+        .navbar {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .brand {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #845ec2;
+        }
+        nav a {
+            margin-left: 14px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            color: #555;
+            padding: 6px 10px;
+            border-radius: 999px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav a:hover {
+            background: #fbe2ff;
+            color: #5c3c92;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 22px 16px 40px;
+        }
+        h1 {
+            margin-top: 0;
+            font-size: 1.7rem;
+            color: #5c3c92;
+        }
+        h2 {
+            font-size: 1.2rem;
+            color: #6b4ea0;
+            margin-top: 22px;
+        }
+        p, li {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #555;
+        }
+        .task {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 22px;
+            padding: 18px 18px 20px;
+            border: 1px solid #f3e8ff;
+            box-shadow: 0 10px 22px rgba(146, 129, 198, 0.12);
+            margin-top: 18px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #ffd4e5;
+            border: none;
+            text-decoration: none;
+            color: #633c91;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            box-shadow: 0 6px 14px rgba(255, 142, 184, 0.4);
+        }
+        .btn:hover {
+            background: #ffc4dd;
+        }
+        .output-block {
+            margin-top: 10px;
+            padding: 10px 12px;
+            border-radius: 16px;
+            background: #fdfbff;
+            border: 1px dashed #e0cff8;
+            font-size: 0.9rem;
+        }
+        table.matrix {
+            border-collapse: collapse;
+            margin-top: 8px;
+        }
+        table.matrix td {
+            border: 1px solid #d9c9f3;
+            padding: 4px 8px;
+            font-size: 0.85rem;
+            text-align: right;
+            min-width: 40px;
+        }
+        .changed {
+            background: #fff7c2;
+        }
+        .clock-box {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: 16px;
+            background: #ffffffcc;
+            border: 1px solid #f3e8ff;
+            display: inline-block;
+            font-family: "Courier New", monospace;
+            font-size: 1.2rem;
+            color: #5c3c92;
+        }
+        footer {
+            margin-top: 26px;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #777;
+        }
+        a.back-link {
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+            color: #7b3f9c;
+            text-decoration: none;
+        }
+        a.back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="brand">Практична робота з JavaScript</div>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="osobysta.html">Особиста сторінка</a>
+            <a href="vizytka.html">Візитка студента</a>
+            <a href="praktika.html">Практична робота з JavaScript</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <a class="back-link" href="index.html">← Повернутися на головну</a>
+
+    <h1>Практична робота з JavaScript</h1>
+    <p>
+        Варіант <strong>1</strong>. Нижче наведені задачі з практичної роботи та їх
+        реалізація мовою JavaScript. Ввід даних здійснюється через
+        <code>prompt</code>, але всі початкові дані та результати виводяться
+        на сторінку.
+    </p>
+
+    <!-- ЗАДАЧА 1 -->
+    <div class="task">
+        <h2>Задача 1. Перевірка, чи є число паліндромом</h2>
+        <p><strong>Умова:</strong> вводити натуральні числа і визначати,
+            чи є введене число паліндромом. Для визначення паліндрому
+            використовується окрема функція <code>isPalindrome(n)</code>.
+            Програма працює доти, доки користувач не введе 0 або не
+            натисне «Скасувати».</p>
+        <button class="btn" onclick="runTask1()">Запустити задачу 1</button>
+        <div id="task1-output" class="output-block">
+            <em>Результати ще не обчислювались.</em>
+        </div>
+    </div>
+
+    <!-- ЗАДАЧА 2 -->
+    <div class="task">
+        <h2>Задача 2. Матриця: обмін першого і останнього стовпців</h2>
+        <p><strong>Умова:</strong> створити матрицю дійсних чисел (розміри та
+            проміжок значень вводяться через вікна повідомлень).
+            Заповнити матрицю випадковими числами на проміжку
+            <code>(a, b)</code>. Поміняти місцями перший і останній стовпці.
+            Вхідну і результуючу матриці вивести на сторінку, змінені
+            елементи виділити іншим кольором.</p>
+        <button class="btn" onclick="runTask2()">Запустити задачу 2</button>
+        <div id="task2-input" class="output-block">
+            <strong>Початкова матриця:</strong>
+            <div id="task2-input-matrix"></div>
+        </div>
+        <div id="task2-output" class="output-block">
+            <strong>Результуюча матриця:</strong>
+            <div id="task2-output-matrix"></div>
+        </div>
+    </div>
+
+    <!-- ЗАДАЧА 3 -->
+    <div class="task">
+        <h2>Задача 3. Приклад готового скрипта – цифровий годинник</h2>
+        <p>
+            Як приклад використання готового скрипта JavaScript додано
+            простий <strong>цифровий годинник</strong>, який показує поточний час і
+            щосекунди оновлюється.
+        </p>
+        <div id="clock" class="clock-box">--:--:--</div>
+    </div>
+
+    <footer>
+        &copy; 2025 · Практична робота з JavaScript · Юрчук Аліна, група Інф-35О
+    </footer>
+</div>
+
+<script>
+    // ===== ЗАДАЧА 1. Паліндром =====
+    function isPalindrome(num) {
+        const str = String(num);
+        const reversed = str.split('').reverse().join('');
+        return str === reversed;
+    }
+
+    function runTask1() {
+        const output = document.getElementById('task1-output');
+        output.innerHTML = '';
+        const list = document.createElement('ul');
+
+        while (true) {
+            let input = prompt('Задача 1. Введіть натуральне число (0 або Скасувати – завершити):');
+            if (input === null) break;
+            input = input.trim();
+            if (input === '') {
+                alert('Порожній ввід. Спробуйте ще раз.');
+                continue;
+            }
+            const n = Number(input);
+            if (!Number.isInteger(n) || n < 0) {
+                alert('Потрібно ввести натуральне число (0, 1, 2, 3, ...).');
+                continue;
+            }
+            if (n === 0) break;
+
+            const li = document.createElement('li');
+            li.textContent = 'Введене число: ' + n +
+                ' → ' + (isPalindrome(n) ? 'паліндром' : 'не паліндром');
+            list.appendChild(li);
+        }
+
+        if (list.children.length === 0) {
+            output.innerHTML = '<em>Обчислень не виконано.</em>';
+        } else {
+            output.appendChild(list);
+        }
+    }
+
+    // ===== ЗАДАЧА 2. Матриця =====
+    function runTask2() {
+        const inputDiv = document.getElementById('task2-input-matrix');
+        const outputDiv = document.getElementById('task2-output-matrix');
+        inputDiv.innerHTML = '';
+        outputDiv.innerHTML = '';
+
+        const rows = askPositiveInt('Задача 2. Введіть кількість рядків (ціле > 0):');
+        if (rows === null) return;
+        const cols = askPositiveInt('Введіть кількість стовпців (ціле > 1):', 2);
+        if (cols === null) return;
+
+        const a = askNumber('Введіть початок інтервалу a (дійсне число):');
+        if (a === null) return;
+        const b = askNumber('Введіть кінець інтервалу b (дійсне число, > a):', x => x > a);
+        if (b === null) return;
+
+        const matrix = [];
+        for (let i = 0; i < rows; i++) {
+            const row = [];
+            for (let j = 0; j < cols; j++) {
+                const value = a + Math.random() * (b - a);
+                row.push(Number(value.toFixed(2)));
+            }
+            matrix.push(row);
+        }
+
+        const result = matrix.map(row => row.slice());
+        const changed = Array.from({ length: rows }, () => Array(cols).fill(false));
+
+        for (let i = 0; i < rows; i++) {
+            const tmp = result[i][0];
+            result[i][0] = result[i][cols - 1];
+            result[i][cols - 1] = tmp;
+            changed[i][0] = true;
+            changed[i][cols - 1] = true;
+        }
+
+        inputDiv.appendChild(createMatrixTable(matrix));
+        outputDiv.appendChild(createMatrixTable(result, changed));
+    }
+
+    function askPositiveInt(message, minValue) {
+        minValue = minValue || 1;
+        while (true) {
+            let s = prompt(message);
+            if (s === null) return null;
+            s = s.trim();
+            const n = Number(s);
+            if (Number.isInteger(n) && n >= minValue) return n;
+            alert('Потрібно ввести ціле число не менше ' + minValue + '.');
+        }
+    }
+
+    function askNumber(message, extraCheck) {
+        while (true) {
+            let s = prompt(message);
+            if (s === null) return null;
+            s = s.trim();
+            const x = Number(s);
+            if (!Number.isNaN(x) && (!extraCheck || extraCheck(x))) return x;
+            alert('Невірне значення. Спробуйте ще раз.');
+        }
+    }
+
+    function createMatrixTable(matrix, changed) {
+        const table = document.createElement('table');
+        table.className = 'matrix';
+        for (let i = 0; i < matrix.length; i++) {
+            const tr = document.createElement('tr');
+            for (let j = 0; j < matrix[i].length; j++) {
+                const td = document.createElement('td');
+                td.textContent = matrix[i][j].toFixed(2);
+                if (changed && changed[i] && changed[i][j]) {
+                    td.classList.add('changed');
+                }
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+        return table;
+    }
+
+    // ===== ЗАДАЧА 3. Годинник =====
+    function updateClock() {
+        const clock = document.getElementById('clock');
+        const now = new Date();
+        const hh = String(now.getHours()).padStart(2, '0');
+        const mm = String(now.getMinutes()).padStart(2, '0');
+        const ss = String(now.getSeconds()).padStart(2, '0');
+        clock.textContent = hh + ':' + mm + ':' + ss;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+</script>
+</body>
+</html>
