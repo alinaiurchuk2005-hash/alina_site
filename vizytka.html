@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Візитка студента – Юрчук Аліна</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #fdf2ff, #e7f9ff, #fef7e0);
+            color: #333;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid #f0dff5;
+        }
+        .navbar {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .brand {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #845ec2;
+        }
+        nav a {
+            margin-left: 14px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            color: #555;
+            padding: 6px 10px;
+            border-radius: 999px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav a:hover {
+            background: #fbe2ff;
+            color: #5c3c92;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 22px 16px 40px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 26px;
+            padding: 22px 22px 24px;
+            border: 1px solid #f3e8ff;
+            box-shadow: 0 14px 28px rgba(146, 129, 198, 0.25);
+            text-align: center;
+        }
+        .subtitle {
+            margin-top: 4px;
+            font-size: 0.85rem;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            color: #a279c9;
+        }
+        h1 {
+            margin-top: 8px;
+            margin-bottom: 12px;
+            font-size: 1.6rem;
+            color: #5c3c92;
+        }
+        .line {
+            width: 80px;
+            height: 3px;
+            border-radius: 999px;
+            margin: 0 auto 14px;
+            background: linear-gradient(90deg, #ffd4e5, #c8e6ff);
+        }
+        .info-row {
+            margin: 4px 0;
+            font-size: 0.95rem;
+        }
+        .label {
+            font-weight: 600;
+            color: #6b4ea0;
+        }
+        .tags {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .tag {
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #fff7ff;
+            border: 1px solid #f4dafc;
+        }
+        .contacts {
+            margin-top: 16px;
+            font-size: 0.9rem;
+        }
+        .contacts a {
+            color: #7b3f9c;
+            text-decoration: none;
+        }
+        .contacts a:hover {
+            text-decoration: underline;
+        }
+        .note {
+            margin-top: 8px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+        footer {
+            margin-top: 26px;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #777;
+        }
+        a.back-link {
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+            color: #7b3f9c;
+            text-decoration: none;
+        }
+        a.back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="brand">Візитка студента</div>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="osobysta.html">Особиста сторінка</a>
+            <a href="vizytka.html">Візитка</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <a class="back-link" href="index.html">← Повернутися на головну</a>
+
+    <div class="card">
+        <div class="subtitle">Студентка</div>
+        <h1>Юрчук Аліна</h1>
+        <div class="line"></div>
+
+        <div class="info-row">
+            <span class="label">Навчальний заклад:</span>
+            <span> Волинський національний університет імені Лесі Українки</span>
+        </div>
+        <div class="info-row">
+            <span class="label">Група:</span>
+            <span> Інф-35О</span>
+        </div>
+        <div class="info-row">
+            <span class="label">Статус:</span>
+            <span> студентка</span>
+        </div>
+
+        <div class="info-row">
+            <span class="label">Навчальні інтереси:</span>
+            <span> інформатика, інформаційні технології, вебтехнології, офісні програми</span>
+        </div>
+
+        <div class="tags">
+            <span class="tag">Інформатика</span>
+            <span class="tag">ІТ</span>
+            <span class="tag">ВНУ ім. Лесі Українки</span>
+            <span class="tag">Інф-35О</span>
+        </div>
+
+        <div class="contacts">
+            <div class="info-row">
+                <span class="label">E-mail:</span>
+                <a href="mailto:youremail@example.com">youremail@example.com</a>
+            </div>
+            <div class="note">
+                (замінити електронну адресу на свою)
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 · Візитка студентки Юрчук Аліни, група Інф-35О
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мій студентський сайт – Юрчук Аліна</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #fdf2ff, #e7f9ff, #fef7e0);
+            color: #333;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #f0dff5;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .navbar {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #845ec2;
+        }
+        nav a {
+            margin-left: 16px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            color: #555;
+            padding: 6px 10px;
+            border-radius: 999px;
+            transition: background 0.2s, color 0.2s, transform 0.1s;
+        }
+        nav a:hover {
+            background: #fbe2ff;
+            color: #5c3c92;
+            transform: translateY(-1px);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 24px 16px 40px;
+        }
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            gap: 24px;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .hero-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 24px;
+            padding: 24px 22px;
+            box-shadow: 0 14px 30px rgba(133, 104, 186, 0.15);
+            border: 1px solid #f0e4ff;
+        }
+        .hero h1 {
+            font-size: 1.9rem;
+            margin-bottom: 10px;
+            color: #5c3c92;
+        }
+        .hero-subtitle {
+            font-size: 1rem;
+            margin-bottom: 18px;
+            color: #666;
+        }
+        .pill {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 999px;
+            background: #fbe2ff;
+            color: #7a3ca5;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: #ffd4e5;
+            border: none;
+            text-decoration: none;
+            color: #633c91;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 8px 18px rgba(255, 142, 184, 0.4);
+            transition: transform 0.12s, box-shadow 0.12s, background 0.12s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(255, 142, 184, 0.6);
+            background: #ffc4dd;
+        }
+        .hero-badge {
+            background: linear-gradient(145deg, #ffe4f3, #e6f4ff);
+            border-radius: 24px;
+            padding: 20px 18px;
+            border: 1px dashed #f0c8ff;
+            font-size: 0.9rem;
+        }
+        .hero-badge h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: #7444ad;
+        }
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+        .tag {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid #f5dfff;
+            color: #555;
+        }
+        .sections {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 16px 16px 18px;
+            border: 1px solid #f3e8ff;
+            box-shadow: 0 10px 22px rgba(146, 129, 198, 0.12);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #6b4ea0;
+            font-size: 1.05rem;
+        }
+        .card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .card a {
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: #7b3f9c;
+            font-weight: 600;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 32px;
+            padding: 14px 16px 20px;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #777;
+        }
+        @media (max-width: 720px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            nav a {
+                margin-left: 10px;
+                font-size: 0.85rem;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="brand">Сайт студентки – Юрчук Аліна</div>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="osobysta.html">Особиста сторінка</a>
+            <a href="vizytka.html">Візитка студента</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-card">
+            <span class="pill">Студентка групи Інф-35О</span>
+            <h1>Вітаю на моєму студентському сайті!</h1>
+            <p class="hero-subtitle">
+                Мене звати <strong>Юрчук Аліна</strong>. Я навчаюся у 
+                <strong>Волинському національному університеті імені Лесі Українки</strong>,
+                у групі <strong>Інф-35О</strong>. На цьому сайті зібрана інформація про мене як студентку,
+                мої навчальні інтереси та контакти.
+            </p>
+            <a class="btn" href="osobysta.html">Перейти до особистої сторінки</a>
+        </div>
+
+        <div class="hero-badge">
+            <h2>Про що цей сайт?</h2>
+            <p>
+                Це навчальний проєкт, створений у межах вивчення інформатики та вебтехнологій.
+                Він містить:
+            </p>
+            <ul>
+                <li>особисту сторінку студентки;</li>
+                <li>візитку з основною інформацією;</li>
+                <li>структуровані блоки із навчальними інтересами.</li>
+            </ul>
+            <div class="tag-list">
+                <span class="tag">Інформатика</span>
+                <span class="tag">ВНУ ім. Лесі Українки</span>
+                <span class="tag">Інф-35О</span>
+                <span class="tag">Студентський сайт</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="sections">
+        <article class="card">
+            <h3>Особиста сторінка</h3>
+            <p>
+                Тут я розповідаю про себе, свої захоплення, навчання та плани на майбутнє. 
+                Можна дізнатися, чим я цікавлюся та які напрямки ІТ мене приваблюють.
+            </p>
+            <a href="osobysta.html">Відкрити особисту сторінку →</a>
+        </article>
+
+        <article class="card">
+            <h3>Візитка студента</h3>
+            <p>
+                Коротка, але інформативна картка: ПІБ, група, заклад освіти, основні інтереси 
+                та контактні дані. Зручно для представлення себе викладачам та одногрупникам.
+            </p>
+            <a href="vizytka.html">Переглянути візитку →</a>
+        </article>
+
+        <article class="card">
+            <h3>Навчальні інтереси</h3>
+            <p>
+                Мене цікавлять сучасні інформаційні технології, веброзробка, робота з офісними
+                програмами, підготовка навчальних матеріалів та використання цифрових ресурсів 
+                у навчальному процесі.
+            </p>
+        </article>
+    </section>
+
+    <footer>
+        &copy; 2025 · Студентський сайт Юрчук Аліни, група Інф-35О · Волинський національний університет імені Лесі Українки
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Особиста сторінка – Юрчук Аліна</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #fdf2ff, #e7f9ff, #fef7e0);
+            color: #333;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid #f0dff5;
+        }
+        .navbar {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .brand {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #845ec2;
+        }
+        nav a {
+            margin-left: 14px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            color: #555;
+            padding: 6px 10px;
+            border-radius: 999px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav a:hover {
+            background: #fbe2ff;
+            color: #5c3c92;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 22px 16px 40px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            padding: 20px 18px 24px;
+            border: 1px solid #f3e8ff;
+            box-shadow: 0 10px 22px rgba(146, 129, 198, 0.12);
+        }
+        h1 {
+            margin-top: 0;
+            font-size: 1.7rem;
+            color: #5c3c92;
+        }
+        h2 {
+            font-size: 1.15rem;
+            color: #6b4ea0;
+            margin-top: 18px;
+        }
+        p, li {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #555;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+            margin-top: 12px;
+        }
+        .subcard {
+            background: #fff7ff;
+            border-radius: 18px;
+            padding: 12px 14px;
+            border: 1px solid #f4dafc;
+        }
+        .label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #a279c9;
+        }
+        .value {
+            font-weight: 600;
+            color: #5a3f86;
+        }
+        .list-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+        .tag {
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid #f5dfff;
+        }
+        footer {
+            margin-top: 26px;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #777;
+        }
+        a.back-link {
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+            color: #7b3f9c;
+            text-decoration: none;
+        }
+        a.back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="brand">Особиста сторінка</div>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="osobysta.html">Особиста сторінка</a>
+            <a href="vizytka.html">Візитка</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <a class="back-link" href="index.html">← Повернутися на головну</a>
+
+    <div class="card">
+        <h1>Юрчук Аліна</h1>
+        <p>
+            Мене звати <strong>Юрчук Аліна</strong>, я студентка 
+            <strong>Волинського національного університету імені Лесі Українки</strong>,
+            навчаюся у групі <strong>Інф-35О</strong>. Цей сайт створено як навчальний 
+            проєкт з інформатики для відпрацювання навичок роботи з вебсторінками.
+        </p>
+
+        <div class="info-grid">
+            <div class="subcard">
+                <div class="label">Навчальний заклад</div>
+                <div class="value">Волинський національний університет імені Лесі Українки</div>
+            </div>
+            <div class="subcard">
+                <div class="label">Група</div>
+                <div class="value">Інф-35О</div>
+            </div>
+            <div class="subcard">
+                <div class="label">Статус</div>
+                <div class="value">Студентка</div>
+            </div>
+        </div>
+
+        <h2>Мої навчальні інтереси</h2>
+        <p>
+            Мені подобається вивчати сучасні інформаційні технології та те, як їх можна 
+            застосовувати в освіті й повсякденному житті. Особливу увагу я приділяю:
+        </p>
+        <ul>
+            <li>основам програмування та алгоритмізації;</li>
+            <li>роботі з текстовими процесорами, електронними таблицями та презентаціями;</li>
+            <li>використанню хмарних сервісів та онлайн-інструментів для навчання;</li>
+            <li>створенню простих вебсторінок і навчальних матеріалів.</li>
+        </ul>
+
+        <h2>Мої захоплення</h2>
+        <p>
+            Окрім навчання, я люблю:
+        </p>
+        <ul>
+            <li>дивитися навчальні відео з інформатики та ІТ;</li>
+            <li>працювати з презентаціями та оформленням матеріалів;</li>
+            <li>слухати музику та прогулюватися на свіжому повітрі;</li>
+            <li>спілкуватися з друзями та обговорювати навчальні теми.</li>
+        </ul>
+
+        <h2>Мої якості</h2>
+        <p>
+            Я вважаю себе відповідальною, наполегливою та уважною до деталей. 
+            Люблю доводити розпочату справу до кінця та завжди готова навчатися новому.
+        </p>
+
+        <div class="list-tags">
+            <span class="tag">Відповідальність</span>
+            <span class="tag">Наполегливість</span>
+            <span class="tag">Уважність</span>
+            <span class="tag">Робота в команді</span>
+            <span class="tag">ІТ та інформатика</span>
+        </div>
+
+        <h2>Контакти</h2>
+        <p>
+            Електронна пошта: 
+            <a href="mailto:youremail@example.com">youremail@example.com</a><br>
+            <em>(замінити на свою адресу)</em>
+        </p>
+    </div>
+
+    <footer>
+        &copy; 2025 · Особиста сторінка Юрчук Аліни, група Інф-35О
+    </footer>
+</div>
+</body>
+</html>
